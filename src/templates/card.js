@@ -6,7 +6,7 @@ import * as startSvg from "../assets/icons/start.svg";
 
 function Card() {
   return (
-    <div className="col-5 m-2">
+    <div className="col-12 col-md-12 col-lg-5 col-xl-5 m-2">
       {/* Corpo do cartão */}
       <div id="card-azul" className="body-card">
         {/* Título & Número de cartões */}
