@@ -32,10 +32,10 @@ function App() {
           </div>
         </nav>
       </header>
-      <section className="container align-content-center first">
+      <section className="container-fluid align-content-center first">
         <div className="row">
-          <div className="col-12 col-sm-6 p-0 m-0">
-            <div className="row text-center text-sm-start">
+          <div className="col-12 col-sm-12 p-0 m-0">
+            <div className="row text-center">
               <div className="col-12">
                 <h1 className="display-4 fw-bolder jakarta">
                   DuckieAnki: Aprenda com flashcards, <br />
@@ -59,23 +59,7 @@ function App() {
           <div className="col"></div>
         </div>
       </section>
-      <section className="container card-container">
-        <div className="row card-display">
-          <div className="col"></div>
-          <div className="col p-0 m-0 card-container">
-            <div className="row justify-content-xl-center">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </main>
   );
 }

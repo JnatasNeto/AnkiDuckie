@@ -199,13 +199,6 @@
   }
 } */
 
-@media (max-width: 425px) {
-  .card-display {
-    position: relative;
-    top: -100px;
-    right: 2rem;
-  }
-}
 
 @keyframes ScrollSobe {
   0% {

@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
-header{
+header {
   position: relative;
   z-index: 2;
 }
 
 section.first {
   height: calc(100vh - 4rem);
+}
+
+section {
+  background-image: url("../assets/div.section-hero-imagine.svg");
 }
