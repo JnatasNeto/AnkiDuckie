@@ -1,0 +1,503 @@
+<div id="sobe" class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div id="2" class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div id="sobe" class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div id="2" class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div id="sobe" class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div id="sobe" class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div id="sobe"class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-6">
+                {/* Corpo do cartão */}
+                  <div id="card-azul" class="body-card">
+                    {/* Título & Número de cartões */}
+                    <div class="header-card">
+                      <h5>Lorem</h5>
+                      <div class="number-cards">
+                        <starSvg.ReactComponent />
+                        <span>26</span>
+                      </div>
+                    </div>
+                    {/* Tags & Botão */}
+                    <div class="footer-card">
+                      <span class="tag">#Lorem</span>
+                      <button class="btn btn-primary btn-card">
+                        Continuar
+                        <startSvg.ReactComponent />
+                      </button>
+                    </div>
+                  </div>
+              </div>
