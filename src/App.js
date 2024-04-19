@@ -1,8 +1,9 @@
 import React from "react";
-import "./style/home.css";
 import { ReactComponent as IllustrationDoll } from "./assets/image/illustration-doll-fly.svg";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import "./style/home.css";
+import "./style/boostrapSob.css";
 
 function App() {
   return (
