@@ -26,7 +26,7 @@ function App() {
                 </p>
               </div>
               <div class="col-12">
-                <button class="btn btn-light text-uppercase rounded-pill border-white">
+                <button class="btn btn-light text-uppercase fw-bold rounded-pill p-2">
                   Começar Agora
                 </button>
               </div>
