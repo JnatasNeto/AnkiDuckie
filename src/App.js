@@ -4,38 +4,33 @@ import "./style/home.css";
 function App() {
   return (
     <main className="App">
-      {/* <!-- Header Ocupa todo o comprimento horizontal --> */}
-      <section class="container-fluid py-2 backgroud-home">
-        <div class="row">
-          <div class="col-12">
-            <header className="container-fluid ">
-              {/* <!-- Vou usar o grid --> */}
-              <nav class="navbar-nav p-2 p-sm-3 p-lg-4">
-                <div class="row">
-                  {/* <!-- Coluna 1 --> */}
-                  <div class="col align-self-center">
-                    {/* <!-- Logo --> */}
-                    <a href="#" class="navbar-brand">
-                      AnkiDuckie
-                    </a>
-                  </div>
-                  {/* <!-- Coluna 2 --> */}
-                  <div class="col-auto">
-                    {/* <!-- Novo Grid --> */}
-                    <div class="row row-cols-2 gap-2">
-                      {/* <!-- Cada col recebe um botão --> */}
-                      <div class="col-auto p-0 m-0">
-                        <button class="btn btn-primary">Cadastrar</button>
-                      </div>
-                      <div class="col-auto p-0 m-0">
-                        <button class="btn btn-primary">Login</button>
-                      </div>
-                    </div>
-                  </div>
+      {/* <!-- Header --> */}
+      <header className="container-fluid ">
+        <nav class="navbar-nav p-2 p-sm-3 p-lg-4">
+          <div class="row">
+            {/* <!-- Coluna 1 --> */}
+            <div class="col align-self-center">
+              {/* <!-- Logo --> */}
+              <a href="#" class="navbar-brand">
+                AnkiDuckie
+              </a>
+            </div>
+            {/* <!-- Coluna 2 --> */}
+            <div class="col-auto">
+              <div class="row row-cols-2 gap-2">
+                <div class="col-auto p-0 m-0">
+                  <button class="btn btn-primary">Cadastrar</button>
                 </div>
-              </nav>
-            </header>
+                <div class="col-auto p-0 m-0">
+                  <button class="btn btn-outline-primary">Login</button>
+                </div>
+              </div>
+            </div>
           </div>
+        </nav>
+      </header>
+      <section class="container-fluid align-content-center py-2 container-principal">
+        <div class="row">
           <div class="col-12 py-4">
             <div class="row text-center">
               <div class="col-12">

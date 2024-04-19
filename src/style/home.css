@@ -1,5 +1,12 @@
-.backgroud-home {
-    height: 80vh;
+header {
+  background-image: url("../assets/image/background.svg");
+  background-position-y: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.container-principal {
+  height: 80vh;
   background-image: url("../assets/image/background.svg");
   background-position-y: bottom;
   background-size: cover;
