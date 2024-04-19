@@ -1,0 +1,7 @@
+.backgroud-home {
+    height: 80vh;
+  background-image: url("../assets/image/background.svg");
+  background-position-y: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
