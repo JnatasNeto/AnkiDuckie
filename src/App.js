@@ -46,8 +46,8 @@ function App() {
                   sua aliada.
                 </p>
               </div>
-              <div className="col-12">
-                <button className="btn btn-primary text-uppercase">
+              <div class="col-12">
+                <button class="btn btn-primary text-uppercase">
                   Começar Agora
                 </button>
               </div>
