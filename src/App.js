@@ -36,22 +36,24 @@ function App() {
               </nav>
             </header>
           </div>
-          <div class="col-12">
+          <div class="col-12 py-4">
             <div class="row text-center">
               <div class="col-12">
-                <h1 class="display-4">
+                <h1 class="display-4 fw-bold text-light">
                   Aprenda com flashcards, <br /> estude menos!
                 </h1>
               </div>
               <div class="col-12">
-                <p class="lead">
+                <p class="lead fw-normal text-light">
                   Esqueça o medo das provas e aprenda idiomas com facilidade!{" "}
                   <br />A repetição espaçada, com comprovação científica, é a
                   sua aliada.
                 </p>
               </div>
               <div class="col-12">
-                <button class="btn btn-primary">Começar Agora</button>
+                <button class="btn btn-primary text-uppercase">
+                  Começar Agora
+                </button>
               </div>
             </div>
           </div>
@@ -67,7 +69,9 @@ function App() {
             ></img>
           </div>
           <div class="col-12 col-lg-6 align-self-center">
-            <h3>Esquecer? Jamais! A era da memória impecável chegou!</h3>
+            <h3 className="fw-bolder">
+              Esquecer? Jamais! A era da memória impecável chegou!
+            </h3>
             <p>
               Lembrar-se de tudo se tornou tão simples quanto amarrar os
               cadarços. Tarefas, compromissos, ideias geniais... nada mais
