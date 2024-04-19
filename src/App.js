@@ -1,5 +1,6 @@
 import React from "react";
 import "./style/home.css";
+import { ReactComponent as IllustrationDoll } from "./assets/image/illustration-doll-fly.svg";
 
 function App() {
   return (
@@ -51,6 +52,9 @@ function App() {
                 </button>
               </div>
             </div>
+          </div>
+          <div className="col-12 text-center">
+            <IllustrationDoll className="img-fluid" alt="Image by pikisuperstar on Freepik"/>
           </div>
         </div>
       </section>

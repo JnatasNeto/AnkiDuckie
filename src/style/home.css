@@ -1,14 +1,26 @@
 header {
-  background-image: url("../assets/image/background.svg");
+  background-image: url("../assets/image/background-principal.svg");
   background-position-y: top;
   background-size: auto;
   background-repeat: no-repeat;
 }
 
 .container-principal {
-  height: 80vh;
-  background-image: url("../assets/image/background.svg");
+  height: 88.2vh;
+  background-image: url("../assets/image/background-principal.svg");
   background-position-y: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 426px) {
+  header {
+    background-position-x: center;
+  }
+  .container-principal {
+    background-position-y: bottom;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
