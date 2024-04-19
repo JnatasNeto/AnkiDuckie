@@ -13,6 +13,22 @@ header {
   background-repeat: no-repeat;
 }
 
+.start-now.rounded {
+  border-radius: 1rem !important;
+  transform: scale(1);
+  transition: transform 0.3s ease-in;
+}
+
+.start-now:hover {
+  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease,
+    transform 0.3s ease-in, border-radius 0.5s ease;
+  border-radius: 1.125rem;
+  border: 1px solid #f96639 !important;
+  background: #f96639 !important;
+  color: white !important;
+  transform: scale(1.05);
+}
+
 @media (max-width: 426px) {
   header {
     background-position-x: center;
