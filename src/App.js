@@ -47,14 +47,17 @@ function App() {
                 </p>
               </div>
               <div class="col-12">
-                <button class="btn btn-primary text-uppercase">
+                <button class="btn btn-light text-uppercase rounded-pill border-white">
                   Começar Agora
                 </button>
               </div>
             </div>
           </div>
           <div className="col-12 text-center">
-            <IllustrationDoll className="img-fluid" alt="Image by pikisuperstar on Freepik"/>
+            <IllustrationDoll
+              className="img-fluid"
+              alt="Image by pikisuperstar on Freepik"
+            />
           </div>
         </div>
       </section>
@@ -79,6 +82,16 @@ function App() {
           </div>
         </div>
       </section>
+      {/* <!-- Footer --> */}
+      <footer className="container-fluid ">
+          <div className="row">
+            <div className="col align-self-center container text-center">
+              <a>
+                AnkiDuckie &copy; Desenvolvido em 2024
+              </a>
+            </div>
+          </div>
+      </footer>
     </main>
   );
 }
