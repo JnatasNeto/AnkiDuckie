@@ -1,35 +1,14 @@
 import React from "react";
 import "./style/home.css";
 import { ReactComponent as IllustrationDoll } from "./assets/image/illustration-doll-fly.svg";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
     <main className="App">
       {/* <!-- Header --> */}
-      <header className="container-fluid ">
-        <nav className="navbar-nav p-2 p-sm-3 p-lg-4">
-          <div className="row">
-            {/* <!-- Coluna 1 --> */}
-            <div className="col align-self-center">
-              {/* <!-- Logo --> */}
-              <a href="#" className="navbar-brand">
-                AnkiDuckie
-              </a>
-            </div>
-            {/* <!-- Coluna 2 --> */}
-            <div className="col-auto">
-              <div className="row row-cols-2 gap-2">
-                <div className="col-auto p-0 m-0">
-                  <button className="btn btn-primary">Cadastrar</button>
-                </div>
-                <div className="col-auto p-0 m-0">
-                  <button className="btn btn-outline-primary">Login</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Header />
       <section className="container-fluid align-content-center py-2 container-principal">
         <div className="row">
           <div className="col-12 py-4">
@@ -83,15 +62,7 @@ function App() {
         </div>
       </section>
       {/* <!-- Footer --> */}
-      <footer className="container-fluid ">
-          <div className="row">
-            <div className="col align-self-center container text-center">
-              <a>
-                AnkiDuckie &copy; Desenvolvido em 2024
-              </a>
-            </div>
-          </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

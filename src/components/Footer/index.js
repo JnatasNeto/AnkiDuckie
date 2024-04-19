@@ -1,9 +1,13 @@
-import styles from "./Footer.module.css";
-
 function Footer(){
     return(
-        <footer className={styles.footer}>
-            <h2>AnkiDuckie &copy; Desenvolvido em 2024</h2>
+        <footer className="container-fluid" >
+            <div className="row">
+            <div className="col align-self-center container text-center">
+              <a>
+                AnkiDuckie &copy; Desenvolvido em 2024
+              </a>
+            </div>
+          </div>
         </footer>
     );
 }
