@@ -1,12 +1,11 @@
 import React from "react";
-<<<<<<< HEAD
-import { ReactComponent as IllustrationDoll } from "./components/assets/image/illustration-doll-fly.svg";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Card from "./components/Cards";
-import "./components/style/main.css";
+import "../../style/home.css";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import { Link } from "react-router-dom";
+import { ReactComponent as IllustrationDoll } from "../../assets/image/illustration-doll-fly.svg";
 
-function App() {
+function Home() {
   return (
     <main className="App">
       {/* <!-- Header --> */}
@@ -28,9 +27,11 @@ function App() {
                 </p>
               </div>
               <div class="col-12">
-                <button class="btn btn-light text-uppercase fw-bold rounded p-2 start-now">
+                <Link to="/register">
+                <button class="btn btn-light text-uppercase rounded-pill border-white">
                   Começar Agora
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -43,14 +44,13 @@ function App() {
         </div>
       </section>
       <section className="container py-4">
-        <div className="row ">
-          <div className="col-12 col-lg-6 justify-content-center">
-            <Card />
-            {/* <img
+        <div className="row">
+          <div className="col-12 col-lg-6">
+            <img
               className="img-fluid"
               src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/6582c18a9cff186bd3731704_Create%20an%20invite-only%20place%20where%20you%20belong.svg"
               alt=""
-            ></img> */}
+            ></img>
           </div>
           <div className="col-12 col-lg-6 align-self-center">
             <h3 className="fw-bolder">
@@ -67,14 +67,6 @@ function App() {
       {/* <!-- Footer --> */}
       <Footer />
     </main>
-=======
-
-import AppRoutes from "./routes";
-
-function App() {
-  return (
-    <AppRoutes />
->>>>>>> 4f6d9f17e2453a09f52e69a620f2c5d39bdd6a39
   );
 }
-export default App;
+export default Home;
