@@ -1,9 +1,8 @@
-// import logo from "./logo.svg";
-import "./App.css";
-import "./style/global.css";
-import "./style/card.css";
+import Footer from "./Pages/components/Footer";
+import Card from "./Pages/components/Cards/card";
+import "./components/Cards/Card.module.css";
 
-import Card from "./templates/card";
+/*import Card from "./templates/card";*/
 
 function App() {
   return (
@@ -58,8 +57,12 @@ function App() {
           </div>
           <div className="col"></div>
         </div>
+        <div>
+          <p>teste</p>
+         {/* <Card /> */}
+        </div>
       </section>
-      
+      <Footer />
     </main>
   );
 }

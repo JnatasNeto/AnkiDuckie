@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0.25rem;
+    /*background-color: #EB5E5E;
+    border-top: 2px solid #f44336;*/
+}
+
+.footer h2{
+    font-size: 1rem;
+    font-weight: 500;
+}

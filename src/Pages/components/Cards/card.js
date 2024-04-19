@@ -1,8 +1,8 @@
 import React from "react";
 // Importando o icone de estrela (Ao lado do número de cards)
-import * as starSvg from "../assets/icons/star.svg";
+import * as starSvg from "./star.svg";
 // Importando o icone de start do botão começar
-import * as startSvg from "../assets/icons/start.svg";
+import * as startSvg from "./start.svg";
 
 function Card() {
   return (
