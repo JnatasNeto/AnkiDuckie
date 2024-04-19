@@ -51,7 +51,7 @@ function App() {
                 </p>
               </div>
               <div class="col-12">
-                <button class="btn btn-primary text-uppercase">
+                <button class="btn btn-light text-uppercase rounded-pill border-white">
                   Começar Agora
                 </button>
               </div>
