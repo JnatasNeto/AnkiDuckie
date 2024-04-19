@@ -1,9 +1,9 @@
 import React from "react";
-import { ReactComponent as IllustrationDoll } from "./assets/image/illustration-doll-fly.svg";
-import Footer from "./components/Footer";
+import { ReactComponent as IllustrationDoll } from "./components/assets/image/illustration-doll-fly.svg";
 import Header from "./components/Header";
-import "./style/home.css";
-import "./style/boostrapSob.css";
+import Footer from "./components/Footer";
+import Card from "./components/Cards";
+import "./components/style/main.css";
 
 function App() {
   return (
@@ -42,13 +42,14 @@ function App() {
         </div>
       </section>
       <section className="container py-4">
-        <div className="row">
-          <div className="col-12 col-lg-6">
-            <img
+        <div className="row ">
+          <div className="col-12 col-lg-6 justify-content-center">
+            <Card />
+            {/* <img
               className="img-fluid"
               src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/6582c18a9cff186bd3731704_Create%20an%20invite-only%20place%20where%20you%20belong.svg"
               alt=""
-            ></img>
+            ></img> */}
           </div>
           <div className="col-12 col-lg-6 align-self-center">
             <h3 className="fw-bolder">

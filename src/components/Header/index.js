@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <header className="container-fluid ">
-      <nav className="navbar-nav p-2 p-sm-3 p-lg-4">
+      <nav className="navbar-nav p-2 p-sm-3 p-lg-3">
         <div className="row">
           {/* <!-- Coluna 1 --> */}
           <div className="col align-self-center">
