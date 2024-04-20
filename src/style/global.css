@@ -1,0 +1,26 @@
+:root {
+  /* COLORS */
+  --background-dark: #101012;
+  --cores-escuras-verde: #0d503c;
+  --cores-escuras-laranja: #653208;
+  --cores-escuras-vermelho: #58151c;
+  --cores-escuras-rosa: #561435;
+  --cores-escuras-azul: #052c65;
+  --cores-escuras-roxo: #290661;
+  --cores-medias-verde: #20c997;
+  --cores-medias-laranja: #fd9843;
+  --cores-medias-vermelho: #e35d6a;
+  --cores-medias-rosa: #de5c9d;
+  --cores-medias-azul: #3d8bfd;
+  --cores-medias-roxo: #8540f5;
+  --cores-claras-verde: #a6e9d5;
+  --cores-claras-laranja: #ffe5d0;
+  --cores-claras-vermelho: #f8d7da;
+  --cores-claras-rosa: #f7d6e6;
+  --cores-claras-azul: #cfe2ff;
+  --cores-claras-roxo: #e0cffc;
+}
+
+button.rounded {
+  border-radius: 1.125rem !important;
+}

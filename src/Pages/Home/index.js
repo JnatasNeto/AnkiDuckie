@@ -1,15 +1,20 @@
 import React from "react";
-import "../../style/main.css";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import { Link } from "react-router-dom";
-import { ReactComponent as IllustrationDoll } from "../../assets/image/illustration-doll-fly.svg";
-import { ReactComponent as CardAzul } from "../../assets/image/Card-Home-Azul.svg";
-import { ReactComponent as CardLaranja } from "../../assets/image/Card-Home-Laranja.svg";
-import { ReactComponent as CardRosa } from "../../assets/image/Card-Home-Rosa.svg";
-import { ReactComponent as CardRoxo } from "../../assets/image/Card-Home-Roxo.svg";
-import { ReactComponent as CardVerde } from "../../assets/image/Card-Home-Verde.svg";
-import { ReactComponent as CardVermelho } from "../../assets/image/Card-Home-Vermelho.svg";
+// Style
+import "../../style/Home/style.css";
+import "../../style/global.css";
+// Componentes
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+// Imagens
+const IllustrationDoll =
+  require("../../assets/images/IllustrationDoll.svg").ReactComponent;
+const CardAzul =
+  require("../../assets/images/Card-Home-Azul.svg").ReactComponent;
+const CardRosa =
+  require("../../assets/images/Card-Home-Rosa.svg").ReactComponent;
+const CardVerde =
+  require("../../assets/images/Card-Home-Verde.svg").ReactComponent;
 
 function Home() {
   return (
@@ -34,7 +39,7 @@ function Home() {
                 </p>
               </div>
               <div class="col-12">
-                <Link to="/register">
+                <Link to="/subscribe">
                   <button class="btn btn-light text-uppercase fw-medium rounded border-white start-now">
                     Começar Agora
                   </button>
@@ -56,7 +61,7 @@ function Home() {
             <div class="d-flex flex-column mb-3">
               <div class="p-0">
                 <div class="col text-center">
-                  <CardAzul className="card-body"/>
+                  <CardAzul className="card-body" />
                 </div>
               </div>
               <div class="p-0 card-container">
@@ -72,10 +77,10 @@ function Home() {
             </div>
           </div>
           <div className="col-12 col-lg-6 align-self-center">
-            <h3 className="fw-bolder">
+            <h3 className="display-6 fw-bolder">
               Esquecer? Jamais! A era da memória impecável chegou!
             </h3>
-            <p>
+            <p className="lead fw-normal">
               Lembrar-se de tudo se tornou tão simples quanto amarrar os
               cadarços. Tarefas, compromissos, ideias geniais... nada mais
               escapa da sua mente afiada!

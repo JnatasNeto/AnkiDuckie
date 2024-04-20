@@ -1,7 +1,7 @@
-function Register(){
+function Subscribe(){
     return(
         <h1>Cadastrar</h1>
     );
 }
 
-export default Register;
+export default Subscribe;

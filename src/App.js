@@ -1,5 +1,6 @@
-import React from "react";
+import logo from './logo.svg';
 
+// Rotas de link
 import AppRoutes from "./routes";
 
 function App() {
@@ -7,4 +8,5 @@ function App() {
     <AppRoutes />
   );
 }
+
 export default App;

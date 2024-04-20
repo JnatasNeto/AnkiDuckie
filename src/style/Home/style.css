@@ -1,10 +1,22 @@
 .container-principal {
   height: 90vh;
-  background-image: url("../assets/image/background-principal.svg");
+  background-image: url("../../assets/images/Background-Gradient.svg");
   background-position-y: bottom;
   background-position-x: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.start-now.rounded {
+  border-radius: 1rem !important;
+}
+
+.start-now:hover {
+  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease,
+    transform 0.3s ease-in, border-radius 0.5s ease;
+  border: 1px solid var(--cores-medias-azul) !important;
+  background: var(--cores-medias-azul) !important;
+  color: white !important;
 }
 
 .card-container {
@@ -12,30 +24,14 @@
 }
 
 svg.card-body {
-  transform: scale(1.0);
+  transform: scale(1);
   width: -webkit-fill-available;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 svg.card-body:hover {
   transform: scale(1.1);
   width: -webkit-fill-available;
-}
-
-.start-now.rounded {
-  border-radius: 1rem !important;
-  transform: scale(1);
-  transition: transform 0.3s ease-in;
-}
-
-.start-now:hover {
-  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease,
-    transform 0.3s ease-in, border-radius 0.5s ease;
-  border-radius: 1.125rem;
-  border: 1px solid #f96639 !important;
-  background: #f96639 !important;
-  color: white !important;
-  transform: scale(1.05);
 }
 
 @media (max-width: 426px) {
@@ -49,9 +45,9 @@ svg.card-body:hover {
   svg.card-body {
     transform: scale(0.9);
     width: -webkit-fill-available;
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
   }
-  
+
   svg.card-body:hover {
     transform: scale(1);
     width: -webkit-fill-available;
