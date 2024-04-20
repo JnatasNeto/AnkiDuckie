@@ -2,8 +2,24 @@
   height: 90vh;
   background-image: url("../assets/image/background-principal.svg");
   background-position-y: bottom;
+  background-position-x: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.card-container {
+  margin-top: -5.5rem !important;
+}
+
+svg.card-body {
+  transform: scale(1.0);
+  width: -webkit-fill-available;
+  transition: transform .5s ease;
+}
+
+svg.card-body:hover {
+  transform: scale(1.1);
+  width: -webkit-fill-available;
 }
 
 .start-now.rounded {
@@ -29,5 +45,15 @@
     background-position-x: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  svg.card-body {
+    transform: scale(0.9);
+    width: -webkit-fill-available;
+    transition: transform .5s ease;
+  }
+  
+  svg.card-body:hover {
+    transform: scale(1);
+    width: -webkit-fill-available;
   }
 }

@@ -3,18 +3,11 @@
   z-index: 1;
 }
 
-.card-display {
-  position: fixed;
-  top: -100px;
-  right: 2rem;
-}
-
 /* Corpo do Card */
 .body-card {
   color: white;
   display: flex;
-  /* width: 18.875rem; */
-  min-width: 14.048rem;
+  width: fit-content;
   padding: 1.5rem 1rem;
   flex-direction: column;
   justify-content: center;

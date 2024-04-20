@@ -1,0 +1,46 @@
+.row > * {
+  padding-right: calc(var(--bs-gutter-x) * 0.3) !important;
+  padding-left: calc(var(--bs-gutter-x) * 0.3) !important;
+}
+
+.rounded.form-custom {
+  --bs-border-opacity: 0.2;
+  border-radius: 1rem !important;
+}
+
+.input-group:not(.has-validation)
+  > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(
+    .form-floating
+  ),
+.input-group
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+    .valid-feedback
+  ):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-radius: 0;
+}
+
+.form-control {
+  border-right: none !important;
+}
+
+.form-control,
+.input-group-text{
+    border: none !important;
+}
+
+.input-group-text{
+    background-color: none !important;
+}
+
+input#nome {
+  border-top-left-radius: 1rem;
+}
+span#nome-icon {
+  border-top-right-radius: 1rem;
+}
+input#inputPassword2 {
+  border-bottom-left-radius: 1rem;
+}
+span#password-icon2 {
+  border-bottom-right-radius: 1rem;
+}

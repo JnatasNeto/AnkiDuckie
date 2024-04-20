@@ -4,6 +4,12 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { Link } from "react-router-dom";
 import { ReactComponent as IllustrationDoll } from "../../assets/image/illustration-doll-fly.svg";
+import { ReactComponent as CardAzul } from "../../assets/image/Card-Home-Azul.svg";
+import { ReactComponent as CardLaranja } from "../../assets/image/Card-Home-Laranja.svg";
+import { ReactComponent as CardRosa } from "../../assets/image/Card-Home-Rosa.svg";
+import { ReactComponent as CardRoxo } from "../../assets/image/Card-Home-Roxo.svg";
+import { ReactComponent as CardVerde } from "../../assets/image/Card-Home-Verde.svg";
+import { ReactComponent as CardVermelho } from "../../assets/image/Card-Home-Vermelho.svg";
 
 function Home() {
   return (
@@ -44,14 +50,26 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="container py-4">
+      <section className="container py-5">
         <div className="row">
           <div className="col-12 col-lg-6">
-            <img
-              className="img-fluid"
-              src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/6582c18a9cff186bd3731704_Create%20an%20invite-only%20place%20where%20you%20belong.svg"
-              alt=""
-            ></img>
+            <div class="d-flex flex-column mb-3">
+              <div class="p-0">
+                <div class="col text-center">
+                  <CardAzul className="card-body"/>
+                </div>
+              </div>
+              <div class="p-0 card-container">
+                <div class="col text-center">
+                  <CardVerde className="card-body" />
+                </div>
+              </div>
+              <div class="p-0 card-container">
+                <div class="col text-center">
+                  <CardRosa className="card-body" />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="col-12 col-lg-6 align-self-center">
             <h3 className="fw-bolder">
