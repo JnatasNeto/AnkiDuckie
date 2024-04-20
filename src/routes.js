@@ -14,5 +14,5 @@ function AppRoutes(){
         </BrowserRouter>
     );
 }
-{/* <!-- teste--> */}
+
 export default AppRoutes;
