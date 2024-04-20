@@ -1,9 +1,9 @@
 import React from "react";
-import "../../components/style/home.css";
+import "../../style/main.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { Link } from "react-router-dom";
-import { ReactComponent as IllustrationDoll } from "../../components/assets/image/illustration-doll-fly.svg";
+import { ReactComponent as IllustrationDoll } from "../../assets/image/illustration-doll-fly.svg";
 
 function Home() {
   return (
