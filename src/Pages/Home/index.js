@@ -22,16 +22,16 @@ function Home() {
               </div>
               <div className="col-12">
                 <p className="lead fw-normal text-light">
-                  Esqueça o medo das provas e aprenda idiomas com facilidade!{" "}
-                  <br />A repetição espaçada, com comprovação científica, é a
+                  Esqueça o medo das provas e aprenda idiomas com facilidade!
+                  <br /> A repetição espaçada, com comprovação científica, é a
                   sua aliada.
                 </p>
               </div>
               <div class="col-12">
                 <Link to="/register">
-                <button class="btn btn-light text-uppercase rounded-pill border-white">
-                  Começar Agora
-                </button>
+                  <button class="btn btn-light text-uppercase fw-medium rounded border-white">
+                    Começar Agora
+                  </button>
                 </Link>
               </div>
             </div>
