@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../../style/main.css";
 
 function Header() {
   return (
@@ -20,12 +21,12 @@ function Header() {
             <div className="row row-cols-2 gap-2">
               <div className="col-auto p-0 m-0">
                 <Link to="/register">
-                  <button className="btn btn-primary">Cadastrar</button>
+                  <button className="btn btn-light fw-medium rounded">Cadastrar</button>
                 </Link>
               </div>
               <div className="col-auto p-0 m-0">
                 <Link to="/login">
-                  <button className="btn btn-outline-primary">Login</button>
+                  <button className="btn btn-outline-light fw-medium rounded">Login</button>
                 </Link>
               </div>
             </div>

@@ -29,7 +29,7 @@ function Home() {
               </div>
               <div class="col-12">
                 <Link to="/register">
-                  <button class="btn btn-light text-uppercase fw-medium rounded border-white">
+                  <button class="btn btn-light text-uppercase fw-medium rounded border-white start-now">
                     Começar Agora
                   </button>
                 </Link>
