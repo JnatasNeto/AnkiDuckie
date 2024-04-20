@@ -1,17 +1,18 @@
 import React from "react";
-import "../../style/home.css";
+import "../../components/style/home.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { Link } from "react-router-dom";
-import { ReactComponent as IllustrationDoll } from "../../assets/image/illustration-doll-fly.svg";
+import { ReactComponent as IllustrationDoll } from "../../components/assets/image/illustration-doll-fly.svg";
 
 function Home() {
   return (
     <main className="App">
-      {/* <!-- Header --> */}
-      <Header />
-      <section className="container-fluid align-content-center py-2 container-principal">
+      <section className="container-fluid container-principal">
         <div className="row">
+          <div class="col-12">
+            <Header />
+          </div>
           <div className="col-12 py-4">
             <div className="row text-center">
               <div className="col-12">
