@@ -1,6 +1,8 @@
 import '../../style/Subscribe/style.css'
 import '../../style/global.css'
 
+import { Link } from "react-router-dom";
+
 function Subscribe(){
     return(
         <main class="subscribe d-flex justify-content-center align-items-center">
@@ -50,7 +52,11 @@ function Subscribe(){
                             </button>
                         </div>
                         <div class="col-12 pt-2 pb-2 align-self-center text-center">
-                            <p class="mb-0 p-0">Já tem uma conta?<a href="#">Faça Login</a></p>
+                            <p class="mb-0 p-0">Já tem uma conta?
+                            <Link to="/login">
+                            Faça Login
+                            </Link>
+                            </p>
                         </div>
                     </div>
                 </div>
