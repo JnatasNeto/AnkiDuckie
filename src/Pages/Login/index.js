@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function Login() {
   return (
     <main className="App d-flex justify-content-center align-items-center vh-100">
@@ -82,7 +85,7 @@ function Login() {
           </div>
         </div>
         <p className="d-flex justify-content-center align-items-end">
-          Forgot Email/Password?
+          Forgot&nbsp; <Link to="/forgot">Email/Password?</Link>
         </p>
       </section>
     </main>
