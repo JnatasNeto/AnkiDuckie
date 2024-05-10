@@ -1,4 +1,7 @@
 import * as React from "react";
+
+//import { Link } from "react-router-dom";
+
 import { styled } from "@mui/material/styles";
 // Body
 import CssBaseline from "@mui/material/CssBaseline";
@@ -12,6 +15,9 @@ import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
+
+
+
 // Images
 import BackgroundImageHome from "../../assets/images/Background-Gradient.svg";
 const CardAzul =
@@ -30,7 +36,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export function Home() {
+ function Home() {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -163,3 +169,5 @@ export function Home() {
     </React.Fragment>
   );
 }
+
+export default Home;

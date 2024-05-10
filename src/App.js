@@ -1,4 +1,6 @@
-import { Home } from "./components/Home/index";
+// Rotas de link
+import AppRoutes from "./routes";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme();
@@ -39,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Home />
+        <AppRoutes />
       </ThemeProvider>
     </div>
   );
