@@ -1,6 +1,6 @@
 import * as React from "react";
 
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 // Body
@@ -15,8 +15,6 @@ import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-
-
 
 // Images
 import BackgroundImageHome from "../../assets/images/Background-Gradient.svg";
@@ -36,7 +34,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
- function Home() {
+function Home() {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -65,27 +63,30 @@ const Item = styled(Paper)(({ theme }) => ({
               background: "transparent",
               boxShadow: "none",
               paddingLeft: "2rem",
-              paddingRight: "2rem"
+              paddingRight: "2rem",
             }}
           >
-            <Toolbar sx={{justifyContent: "space-between"}}>
-              <Logo/>
-              <Button
-                variant="contained"
-                size="medium"
-                sx={{
-                  background: "#FFF",
-                  color: "#000",
-                  boxShadow: "none",
-                  borderRadius: ".625rem",
-                  "&:hover": {
-                    boxShadow: "none",
+            <Toolbar sx={{ justifyContent: "space-between" }}>
+              <Logo />
+
+              <Link to="/login">
+                <Button
+                  variant="contained"
+                  size="medium"
+                  sx={{
                     background: "#FFF",
-                  },
-                }}
-              >
-                Login
-              </Button>
+                    color: "#000",
+                    boxShadow: "none",
+                    borderRadius: ".625rem",
+                    "&:hover": {
+                      boxShadow: "none",
+                      background: "#FFF",
+                    },
+                  }}
+                >
+                  Login
+                </Button>
+              </Link>
             </Toolbar>
           </AppBar>
           <Box
@@ -112,21 +113,24 @@ const Item = styled(Paper)(({ theme }) => ({
               Esqueça o medo das provas e aprenda idiomas com facilidade! <br />{" "}
               A repetição espaçada, com comprovação científica, é a sua aliada.
             </Typography>
-            <Button
-              variant="contained"
-              size="medium"
-              sx={{
-                width: "max-content",
-                padding: "1rem",
-                borderRadius: "1.5rem",
-                boxShadow: "none",
-                "&:hover": {
+
+            <Link to="/subscribe">
+              <Button
+                variant="contained"
+                size="medium"
+                sx={{
+                  width: "max-content",
+                  padding: "1rem",
+                  borderRadius: "1.5rem",
                   boxShadow: "none",
-                },
-              }}
-            >
-              Começar Agora
-            </Button>
+                  "&:hover": {
+                    boxShadow: "none",
+                  },
+                }}
+              >
+                Começar Agora
+              </Button>
+            </Link>
           </Box>
         </Box>
         <Box>

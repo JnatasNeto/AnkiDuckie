@@ -3,7 +3,7 @@ import React from "react";
 
 function Subscribe(){
     return (
-        <></>
+        <h1>Tela Cadastro</h1>
     );
 }
 
