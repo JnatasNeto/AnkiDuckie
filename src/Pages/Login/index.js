@@ -1,47 +1,30 @@
-import { Link } from "react-router-dom";
-
 import React, { useState } from 'react';
-import { TextField, Button, Paper, Typography, Box } from '@mui/material';
 import axios from 'axios';
-
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 function Login() {
-  // Declaração dos estados usando useState
-  const [email, setEmail] = useState("");  // Estado para armazenar o email
-  const [password, setPassword] = useState("");  // Estado para armazenar a senha
-  const [error, setError] = useState("");  // Estado para armazenar mensagens de erro
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  // Função para lidar com o login
   const handleLogin = async () => {
     try {
-      // Envia uma requisição POST para o endpoint de login da API
       const response = await axios.post("http://localhost:8080/auth/login", {
-        email,  // Passa o estado do email
-        password,  // Passa o estado da senha
+        email,
+        password
       });
-
-      // Envia uma mensagem para o console com a resposta da API
       console.log("Login realizado com sucesso:", response.data);
-
-      // Verifica se a resposta contém o token de acesso
-      const token = response.data?.access_token;
+      const token = response.data?.token; // Certifique-se de que está acessando o campo correto
       if (token) {
-        // Armazena o token no localStorage
-        localStorage.setItem("token", response.data.access_token);
-        // Envia uma mensagem para o console com o valor do token armazenado
+        localStorage.setItem("token", token);
         console.log("Token armazenado:", localStorage.getItem("token"));
       } else {
-        // Lança um erro se o token não estiver presente na resposta
         throw new Error("Token não encontrado na resposta");
       }
-
-      // Aqui você pode redirecionar o usuário para outra página, se necessário
     } catch (error) {
-      // Envia uma mensagem para o console contendo o erro
-      console.error("Erro durante o login:", error);
-
-      // Define uma mensagem de erro apropriada no estado
-      if (error.response && error.response.status === 404) {
+      console.log("Erro durante o login:", error);
+      if (error.response && error.response.status === 401) {
         setError("Credenciais inválidas");
       } else {
         setError(error.message || "Erro ao fazer login");
@@ -50,49 +33,31 @@ function Login() {
   };
 
   return (
-    <Box className="login-container">
-      <Paper elevation={10} className="login-paper">
-        <Typography variant="h5" component="h1" textAlign="center">
-          Login
-        </Typography>
-        {error && (
-          <Typography variant="body1" color="error" textAlign="center">
-            {error}
-          </Typography>
-        )}
-        <TextField
-          label="Usuário"
-          variant="outlined"
-          fullWidth
-          required
-          className="login-field"
-          value={email}
+    <div>
+      <form>
+        <input 
+          type="email" 
+          placeholder="Seu email" 
+          required 
+          value={email} 
           onChange={(e) => setEmail(e.target.value)}
         />
-        <TextField
-          label="Senha"
-          type="password"
-          variant="outlined"
-          fullWidth
-          required
-          className="login-field"
-          value={password}
+        <input 
+          type="password" 
+          placeholder="Sua senha" 
+          required 
+          value={password} 
           onChange={(e) => setPassword(e.target.value)}
         />
+        <Button type="button" onClick={handleLogin}>Login</Button>
+      </form>
+    
+      <Link to="/subscribe">
+        <Button>Cadastre-se</Button>
+      </Link>
 
-<Link to="/profile">
-        <Button
-          variant="contained"
-          color="primary"
-          fullWidth
-          className="login-button"
-          onClick={handleLogin}
-        >
-          Entrar
-        </Button>
-        </Link>
-      </Paper>
-    </Box>
+      {error && <p>{error}</p>}
+    </div>
   );
 }
 

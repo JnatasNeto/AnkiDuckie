@@ -1,62 +1,75 @@
+import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
-
 import { Button } from "@mui/material";
 
-import {useState} from 'react';
-
 function Subscribe() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-  })
-
-  const handleFormEdit = (event, name) => {
-    setFormData({
-      ...formData,
-      [name]: event.target.value
-    })
-  }
-
-  const handleForm = async (event) =>{
-    // console.log(formData)
+  const handleSubscribe = async () => {
     try {
-      event.preventDefault()
-      const response = await fetch(`http://localhost:8080/auth/register`, {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {'Content-Type': 'application/json'}
-      })
-      const json = await response.json()
-      console.log(response.status)
-      console.log(json)
-      
+      const response = await axios.post("http://localhost:8080/auth/register", {
+        name,
+        email,
+        password,
+      });
+      console.log("Cadastro realizado com sucesso:", response.data);
+      const token = response.data?.token; // Certifique-se de que está acessando o campo correto
+      if (token) {
+        localStorage.setItem("token", token);
+        console.log("Token armazenado:", localStorage.getItem("token"));
+      } else {
+        throw new Error("Token não encontrado na resposta");
+      }
     } catch (error) {
-      
+      console.log("Erro durante a inscrição:", error);
+      if (error.response && error.response.status === 404) {
+        setError("Credenciais inválidas");
+      } else {
+        setError(error.message || "Erro ao fazer cadastro");
+      }
     }
-  }
+  };
 
- return(
-  <div>
-    <form onSubmit={handleForm}>
+  return (
+    <div>
+      <form>
+        <input
+          type="text"
+          placeholder="Seu nome"
+          required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="Seu email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Sua senha"
+          required
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button type="button" onClick={handleSubscribe}>
+          Cadastrar
+        </Button>
+      </form>
 
-      <input type="text" placeholder="Seu nome" required value={formData.name} onChange={(e) => {handleFormEdit(e, 'name')}}/>
-      <input type="email" placeholder="Seu email" required value={formData.email} onChange={(e) => {handleFormEdit(e, 'email')}}/>
-      <input type="current-password" placeholder="Sua senha" required value={formData.password} onChange={(e) => {handleFormEdit(e, 'password')}}/>
-      <Button onClick={handleForm}>Cadastrar</Button>
-    </form>
-  
-    <Link to="/login">
-   <Button
-   >
-     Login
-   </Button>
-</Link>
+      <Link to="/login">
+        <Button>Login</Button>
+      </Link>
 
-  </div>
-
- );
+      {error && <p>{error}</p>}
+    </div>
+  );
 }
 
 export default Subscribe;
