@@ -49,7 +49,9 @@ function Login() {
           value={password} 
           onChange={(e) => setPassword(e.target.value)}
         />
+        <Link to="/profile">
         <Button type="button" onClick={handleLogin}>Login</Button>
+        </Link>
       </form>
     
       <Link to="/subscribe">
