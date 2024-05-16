@@ -1,41 +1,56 @@
 // Rotas de link
 import AppRoutes from "./routes";
 
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
 
-const theme = createTheme();
-
-theme.typography.h2 = {
-  fontWeight: "700",
-  [theme.breakpoints.up("xs")]: {
-    fontSize: "2.125rem",
+let theme = createTheme({
+  typography: {
+    h1: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    h2: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    h3: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    h4: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    h5: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    h6: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    subtitle1: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    subtitle2: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    body1: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    body2: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    button: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    caption: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
+    overline: {
+      fontFamily: '"Poppins", "Inter", sans-serif',
+    },
   },
-  [theme.breakpoints.up("sm")]: {
-    fontSize: "3.125rem",
-  },
-  [theme.breakpoints.up("md")]: {
-    fontSize: "3.125rem",
-  },
-  [theme.breakpoints.up("lg")]: {
-    fontSize: "3.125rem",
-  },
-};
-
-theme.typography.h5 = {
-  fontWeight: "300",
-  [theme.breakpoints.up("xs")]: {
-    fontSize: "1.125rem",
-  },
-  [theme.breakpoints.up("sm")]: {
-    fontSize: "1.3rem",
-  },
-  [theme.breakpoints.up("md")]: {
-    fontSize: "1.5rem",
-  },
-  [theme.breakpoints.up("lg")]: {
-    fontSize: "1.5rem",
-  },
-};
+});
+theme = responsiveFontSizes(theme);
 
 function App() {
   return (

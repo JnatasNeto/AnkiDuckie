@@ -1,172 +1,313 @@
 import * as React from "react";
-
 import { Link } from "react-router-dom";
-
-import { styled } from "@mui/material/styles";
 // Body
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-//  Typography
-import Typography from "@mui/material/Typography";
-// Header
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
+//  Typography, Header
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
+// Style
+import "./style.css";
 
-// Images
-import BackgroundImageHome from "../../assets/images/Background-Gradient.svg";
+//Imagens Card
 const CardAzul =
-  require("../../assets/images/cards-home/Azul.svg").ReactComponent;
-const CardVerde =
-  require("../../assets/images/cards-home/Verde.svg").ReactComponent;
+  require("../../assets/images/cards-home/Card-Home-Azul.svg").ReactComponent;
+const CardLaranja =
+  require("../../assets/images/cards-home/Card-Home-Laranja.svg").ReactComponent;
 const CardRosa =
-  require("../../assets/images/cards-home/Rosa.svg").ReactComponent;
-const Logo = require("../../logo.svg").ReactComponent;
+  require("../../assets/images/cards-home/Card-Home-Rosa.svg").ReactComponent;
+const CardRoxo =
+  require("../../assets/images/cards-home/Card-Home-Roxo.svg").ReactComponent;
+const CardVerde =
+  require("../../assets/images/cards-home/Card-Home-Verde.svg").ReactComponent;
+const CardVermelho =
+  require("../../assets/images/cards-home/Card-Home-Vermelho.svg").ReactComponent;
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
+const Logo = require("../../logo.svg").ReactComponent;
 
 function Home() {
   return (
     <React.Fragment>
       <CssBaseline />
       <Container
+        maxWidth="100vw"
         sx={{
-          margin: "0",
-          padding: "0 !important",
-          minWidth: "100vw",
           height: "100vh",
-          overflowX: "hidden",
+          margin: "0px !important",
+          padding: "0px !important",
+          overflow: "hidden",
         }}
       >
-        <Box
+        {/* Header */}
+        <AppBar
+          position="static"
           sx={{
-            bgcolor: "#cfe8fc",
-            width: "100vw",
-            height: "95vh",
-            backgroundImage: `url('${BackgroundImageHome}')`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
+            background: "transparent",
+            boxShadow: "none",
+            color: "black",
           }}
         >
-          <AppBar
-            position="static"
-            sx={{
-              background: "transparent",
-              boxShadow: "none",
-              paddingLeft: "2rem",
-              paddingRight: "2rem",
-            }}
-          >
-            <Toolbar sx={{ justifyContent: "space-between" }}>
+          <Toolbar sx={{ justifyContent: "space-between" }}>
+            <Box>
               <Logo />
-
+            </Box>
+            <Box>
+              <Link to="/subscribe">
+                <Button
+                  variant="text"
+                  color="inherit"
+                  sx={{
+                    background: "none",
+                    textTransform: "capitalize",
+                    padding: ".5rem 1rem",
+                    color: "black"
+                  }}
+                >
+                  Cadastrar
+                </Button>
+              </Link>
               <Link to="/login">
                 <Button
-                  variant="contained"
-                  size="medium"
+                  variant="text"
                   sx={{
-                    background: "#FFF",
-                    color: "#000",
-                    boxShadow: "none",
-                    borderRadius: ".625rem",
-                    "&:hover": {
-                      boxShadow: "none",
-                      background: "#FFF",
-                    },
+                    background: "linear-gradient(45deg, #20212B, #16171F)",
+                    padding: ".5rem 1rem",
+                    borderRadius: ".5rem",
+                    textTransform: "capitalize",
+                    color: "#FFF",
                   }}
                 >
                   Login
                 </Button>
               </Link>
-            </Toolbar>
-          </AppBar>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "-webkit-fill-available",
-            }}
-          >
+            </Box>
+          </Toolbar>
+        </AppBar>
+        {/* Contation */}
+        <Box
+          component="section"
+          sx={{
+            height: "-webkit-fill-available",
+            alignContent: "space-around",
+          }}
+        >
+          <Box>
             <Typography
               variant="h2"
-              gutterBottom
-              sx={{ textAlign: "center", color: "#FFF" }}
+              component="h2"
+              sx={{
+                fontFamily: '"Plus Jakarta Sans", "Poppins", sans-serif',
+                fontWeight: 600,
+                lineHeight: "normal",
+                textAlign: "center",
+              }}
             >
-              Aprenda com flashcards, <br /> estude menos!
+              Aprenda com flashcards,
+              <br /> estude menos!
             </Typography>
             <Typography
-              variant="h5"
+              variant="h6"
+              component="h6"
+              sx={{
+                fontWeight: 500,
+                lineHeight: "normal",
+                textAlign: "center",
+              }}
               gutterBottom
-              sx={{ textAlign: "center", color: "#FFF" }}
             >
-              Esqueça o medo das provas e aprenda idiomas com facilidade! <br />{" "}
+              Esqueça o medo das provas e aprenda idiomas com facilidade! <br />
               A repetição espaçada, com comprovação científica, é a sua aliada.
             </Typography>
-
-            <Link to="/subscribe">
-              <Button
-                variant="contained"
-                size="medium"
+          </Box>
+          <Box>
+            <Box
+              className="ContainerCards-1"
+              sx={{
+                width: "fit-content",
+                display: "flex",
+                flexDirection: "row",
+                gap: ".5rem",
+              }}
+            >
+              <Box
                 sx={{
-                  width: "max-content",
-                  padding: "1rem",
-                  borderRadius: "1.5rem",
-                  boxShadow: "none",
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
                   "&:hover": {
-                    boxShadow: "none",
+                    transform: "scale(1.08)",
                   },
                 }}
               >
-                Começar Agora
-              </Button>
-            </Link>
-          </Box>
-        </Box>
-        <Box>
-          <Box sx={{ flexGrow: 1, padding: "3rem 3rem" }}>
-            <Grid container spacing={2}>
-              <Grid
-                item
-                xs={12}
-                md={6}
+                <CardAzul className="Card-Column-1" />
+              </Box>
+              <Box
                 sx={{
                   display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
                 }}
               >
-                <Box>
-                  <CardAzul />
-                </Box>
-                <Box sx={{ marginTop: "-6rem" }}>
-                  <CardVerde />
-                </Box>
-                <Box sx={{ marginTop: "-6rem" }}>
-                  <CardRosa />
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={6} sx={{ alignSelf: "center" }}>
-                <Typography variant="h3" component="h3">
-                  Esquecer? Jamais! A era da memória impecável chegou!
-                </Typography>
-                <Typography variant="h6" component="h6">
-                  Lembrar-se de tudo se tornou tão simples quanto amarrar os
-                  cadarços. Tarefas, compromissos, ideias geniais... nada mais
-                  escapa da sua mente afiada!
-                </Typography>
-              </Grid>
-            </Grid>
+                <CardLaranja className="Card-Column-1" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardRosa className="Card-Column-1" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardRoxo className="Card-Column-1" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardVerde className="Card-Column-1" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardVermelho className="Card-Column-1" />
+              </Box>
+            </Box>
+            <Box
+              className="ContainerCards-2"
+              sx={{
+                width: "fit-content",
+                display: "flex",
+                flexDirection: "row",
+                gap: ".5rem",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardAzul className="Card-Column-2" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardLaranja className="Card-Column-2" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardRosa className="Card-Column-2" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardRoxo className="Card-Column-2" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardVerde className="Card-Column-2" />
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: ".5rem",
+                  width: "20rem",
+                  transform: "scale(1)",
+                  "&:hover": {
+                    transform: "scale(1.08)",
+                  },
+                }}
+              >
+                <CardVermelho className="Card-Column-2" />
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Container>
