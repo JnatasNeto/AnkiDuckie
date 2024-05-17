@@ -143,6 +143,8 @@ function Subscribe() {
               color: "#FFF",
             }}
           >
+            {error && <Alert severity="error" sx={{ mt: 1, mb: 1 }}>{error}</Alert>}
+            {success && <Alert severity="success" sx={{ mt: 1, mb: 1 }}>{success}</Alert>}
             <Typography
               variant="h4"
               gutterBottom
@@ -197,8 +199,6 @@ function Subscribe() {
                   Cadastrar
                 </Button>
               </Box>
-              {error && <Alert severity="error" sx={{ mt: 1 }}>{error}</Alert>}
-              {success && <Alert severity="success" sx={{ mt: 1 }}>{success}</Alert>}
             </Box>
           </Box>
         </Box>
