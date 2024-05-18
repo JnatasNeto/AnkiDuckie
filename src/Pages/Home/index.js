@@ -52,7 +52,7 @@ function Home() {
               <Logo />
             </Box>
             <Box>
-              <Link to="/subscribe">
+              <Link to="/register">
                 <Button
                   variant="text"
                   color="inherit"
