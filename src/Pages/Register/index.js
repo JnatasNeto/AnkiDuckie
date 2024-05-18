@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
 // Body
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
@@ -15,6 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Alert from "@mui/material/Alert";
 import { alpha, styled } from "@mui/material/styles";
+// Images
 const Logo = require("../../logo.svg").ReactComponent;
 
 // TextField Personalizado
@@ -44,31 +44,57 @@ const DuckieTextField = styled((props) => (
   },
 }));
 
-function Login() {
+function Subscribe() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
-  const handleLogin = async () => {
+  useEffect(() => {
+    if (error || success) {
+      const timer = setTimeout(() => {
+        setError("");
+        setSuccess("");
+      }, 3000); // Mensagem desaparecerá após 3 segundos
+
+      return () => clearTimeout(timer);
+    }
+  }, [error, success]);
+
+  const handleSubscribe = async () => {
+    if (!name || !email || !password) {
+      setError("Todos os campos são obrigatórios");
+      setSuccess(""); // Clear success message when there is an error
+      return;
+    }
+
     try {
-      const response = await axios.post("http://localhost:8080/auth/login", {
+      const response = await axios.post("http://localhost:8080/auth/register", {
+        name,
         email,
         password,
       });
-      console.log("Login realizado com sucesso:", response.data);
+      console.log("Cadastro realizado com sucesso:", response.data);
       const token = response.data?.token; // Certifique-se de que está acessando o campo correto
       if (token) {
         localStorage.setItem("token", token);
         console.log("Token armazenado:", localStorage.getItem("token"));
+        setName("");
+        setEmail("");
+        setPassword("");
+        setError("");
+        setSuccess("Cadastrado com sucesso!");
       } else {
         throw new Error("Token não encontrado na resposta");
       }
     } catch (error) {
-      console.log("Erro durante o login:", error);
-      if (error.response && error.response.status === 401) {
+      console.log("Erro durante a inscrição:", error);
+      setSuccess(""); // Clear success message when there is an error
+      if (error.response && error.response.status === 404) {
         setError("Credenciais inválidas");
       } else {
-        setError(error.message || "Erro ao fazer login");
+        setError(error.message || "Erro ao fazer cadastro");
       }
     }
   };
@@ -111,6 +137,35 @@ function Login() {
               </Box>
             </Toolbar>
           </AppBar>
+          {/* Sucess / Error Box */}
+          <Box>
+            {error && (
+              <Alert
+                severity="error"
+                sx={{
+                  fontWeight: "600",
+                  borderRadius: "1rem",
+                  mt: 1,
+                  mb: 1,
+                }}
+              >
+                {error}
+              </Alert>
+            )}
+            {success && (
+              <Alert
+                severity="success"
+                sx={{
+                  fontWeight: "600",
+                  borderRadius: "1rem",
+                  mt: 1,
+                  mb: 1,
+                }}
+              >
+                {success}
+              </Alert>
+            )}
+          </Box>
           {/* Login Form */}
           <Box
             sx={{
@@ -126,12 +181,20 @@ function Login() {
                 gutterBottom
                 sx={{ color: "#000", padding: "1rem 0rem" }}
               >
-                Login
+                Criar uma conta
               </Typography>
             </Box>
             <Box
               sx={{ display: "flex", flexDirection: "column", gap: ".5rem" }}
             >
+              <DuckieTextField
+                id="outlined-required-name"
+                label="Name"
+                variant="filled"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                sx={{ width: "100%" }}
+              />
               <DuckieTextField
                 id="outlined-required-email"
                 label="E-mail"
@@ -148,9 +211,17 @@ function Login() {
                 sx={{ width: "100%" }}
                 onChange={(e) => setPassword(e.target.value)}
               />
+              <DuckieTextField
+                label="Senha"
+                type="password"
+                defaultValue=""
+                variant="filled"
+                sx={{ width: "100%" }}
+                onChange={(e) => setPassword(e.target.value)}
+              />
               <Button
                 variant="text"
-                onClick={handleLogin}
+                onClick={handleSubscribe}
                 sx={{
                   width: "100%",
                   background: "#5A79D6",
@@ -163,16 +234,8 @@ function Login() {
                   },
                 }}
               >
-                Login
+                Cadastrar
               </Button>
-              <Box sx={{ padding: ".5rem 0rem" }}>
-                <Typography variant="body1">
-                  Não tem uma conta?
-                  <Link to="/register">
-                    <Button variant="text" sx={{textTransform: "none"}}>Registre-se</Button>
-                  </Link>
-                </Typography>
-              </Box>
             </Box>
           </Box>
         </Box>
@@ -181,4 +244,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Subscribe;

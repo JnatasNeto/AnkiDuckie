@@ -35,8 +35,7 @@ function Home() {
           height: "100vh",
           margin: "0px !important",
           padding: "0px !important",
-          overflow: "hidden",
-          bgcolor: "#cfe8fc",
+          overflow: "hidden"
         }}
       >
         {/* Header */}
