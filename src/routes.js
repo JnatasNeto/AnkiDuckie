@@ -17,7 +17,7 @@ function AppRoutes() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/forgot" element={<Forgot />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
-          <Route path="/" element={<HomeUser />}></Route>
+          <Route path="/homeuser" element={<HomeUser />}></Route>
           
         </Routes>
       </BrowserRouter>
