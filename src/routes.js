@@ -6,6 +6,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Forgot from "./Pages/ForgotPassword";
 import Profile from "./Pages/Profile";
+import { Gemini } from "./Pages/Gemini";
 
 
 function AppRoutes() {
@@ -18,6 +19,7 @@ function AppRoutes() {
           <Route path="/forgot" element={<Forgot />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/" element={<HomeUser />}></Route>
+          <Route path="/chat" element={<Gemini />}></Route>
           
         </Routes>
       </BrowserRouter>
