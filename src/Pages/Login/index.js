@@ -66,7 +66,7 @@ function Login() {
     }
 
     try {
-      const response = await axios.post("http://localhost:8080/auth/login", {
+      const response = await axios.post("http://localhost:9001/auth/login", {
         email,
         password,
       });
