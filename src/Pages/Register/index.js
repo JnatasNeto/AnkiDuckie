@@ -48,6 +48,7 @@ function Subscribe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -63,8 +64,14 @@ function Subscribe() {
   }, [error, success]);
 
   const handleSubscribe = async () => {
-    if (!name || !email || !password) {
+    if (!name || !email || !password || !confirmPassword) {
       setError("Todos os campos são obrigatórios");
+      setSuccess(""); // Clear success message when there is an error
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("As senhas não coincidem");
       setSuccess(""); // Clear success message when there is an error
       return;
     }
@@ -83,6 +90,7 @@ function Subscribe() {
         setName("");
         setEmail("");
         setPassword("");
+        setConfirmPassword("");
         setError("");
         setSuccess("Cadastrado com sucesso!");
       } else {
@@ -135,8 +143,25 @@ function Subscribe() {
               <Box>
                 <Logo />
               </Box>
+              <Box>
+                <Link to="/login">
+                  <Button
+                    variant="text"
+                    sx={{
+                      background: "linear-gradient(45deg, #20212B, #16171F)",
+                      padding: ".5rem 1rem",
+                      borderRadius: ".5rem",
+                      textTransform: "capitalize",
+                      color: "#FFF",
+                    }}
+                  >
+                    Login
+                  </Button>
+                </Link>
+              </Box>
             </Toolbar>
           </AppBar>
+          
           {/* Sucess / Error Box */}
           <Box>
             {error && (
@@ -206,18 +231,18 @@ function Subscribe() {
               <DuckieTextField
                 label="Senha"
                 type="password"
-                defaultValue=""
                 variant="filled"
-                sx={{ width: "100%" }}
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                sx={{ width: "100%" }}
               />
               <DuckieTextField
-                label="Senha"
+                label="Confirmar Senha"
                 type="password"
-                defaultValue=""
                 variant="filled"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 sx={{ width: "100%" }}
-                onChange={(e) => setPassword(e.target.value)}
               />
               <Button
                 variant="text"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Body
 import CssBaseline from "@mui/material/CssBaseline";
@@ -48,18 +48,25 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
+    if (!email || !password) {
+      setError("Todos os campos são obrigatórios");
+      return;
+    }
+
     try {
       const response = await axios.post("http://localhost:9001/auth/login", {
         email,
         password,
       });
       console.log("Login realizado com sucesso:", response.data);
-      const token = response.data?.token; // Certifique-se de que está acessando o campo correto
+      const token = response.data?.token;
       if (token) {
         localStorage.setItem("token", token);
         console.log("Token armazenado:", localStorage.getItem("token"));
+        navigate("/homeuser");
       } else {
         throw new Error("Token não encontrado na resposta");
       }
@@ -129,6 +136,11 @@ function Login() {
                 Login
               </Typography>
             </Box>
+            {error && (
+              <Alert severity="error" sx={{ marginBottom: "1rem" }}>
+                {error}
+              </Alert>
+            )}
             <Box
               sx={{ display: "flex", flexDirection: "column", gap: ".5rem" }}
             >
@@ -143,7 +155,6 @@ function Login() {
               <DuckieTextField
                 label="Senha"
                 type="password"
-                defaultValue=""
                 variant="filled"
                 sx={{ width: "100%" }}
                 onChange={(e) => setPassword(e.target.value)}
@@ -169,7 +180,9 @@ function Login() {
                 <Typography variant="body1">
                   Não tem uma conta?
                   <Link to="/register">
-                    <Button variant="text" sx={{textTransform: "none"}}>Registre-se</Button>
+                    <Button variant="text" sx={{ textTransform: "none" }}>
+                      Registre-se
+                    </Button>
                   </Link>
                 </Typography>
               </Box>
