@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -50,15 +50,6 @@ function Login() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (error) {
-      const timer = setTimeout(() => {
-        setError("");
-      }, 3000); // Alerta some após 3 segundos
-      return () => clearTimeout(timer);
-    }
-  }, [error]);
-
   const handleLogin = async () => {
     if (!email || !password) {
       setError("Todos os campos são obrigatórios");
@@ -81,7 +72,11 @@ function Login() {
       }
     } catch (error) {
       console.log("Erro durante o login:", error);
-      setError("Email ou senha inválidos");
+      if (error.response && error.response.status === 401) {
+        setError("Credenciais inválidas");
+      } else {
+        setError(error.message || "Erro ao fazer login");
+      }
     }
   };
 
