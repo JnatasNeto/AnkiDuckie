@@ -18,13 +18,8 @@ function AppRoutes() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/forgot" element={<Forgot />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
-<<<<<<< HEAD
           <Route path="/" element={<HomeUser />}></Route>
           <Route path="/chat" element={<Gemini />}></Route>
-=======
-          <Route path="/homeuser" element={<HomeUser />}></Route>
->>>>>>> 3207ff0ca6f800201b6cd271a4edad38a2899279
-          
         </Routes>
       </BrowserRouter>
     );
