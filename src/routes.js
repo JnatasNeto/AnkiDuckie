@@ -7,6 +7,7 @@ import Register from "./Pages/Register";
 import Forgot from "./Pages/ForgotPassword";
 import Profile from "./Pages/Profile";
 import { Gemini } from "./Pages/Gemini";
+import FlashcardForm from "./Pages/CreateDeck";
 
 
 function AppRoutes() {
@@ -20,6 +21,7 @@ function AppRoutes() {
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/" element={<HomeUser />}></Route>
           <Route path="/chat" element={<Gemini />}></Route>
+          <Route path="/createDeck" element={<FlashcardForm />}></Route>
         </Routes>
       </BrowserRouter>
     );
