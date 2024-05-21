@@ -19,7 +19,7 @@ function AppRoutes() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/forgot" element={<Forgot />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
-          <Route path="/" element={<HomeUser />}></Route>
+          <Route path="/homeuser" element={<HomeUser />}></Route>
           <Route path="/chat" element={<Gemini />}></Route>
           <Route path="/createDeck" element={<FlashcardForm />}></Route>
         </Routes>
