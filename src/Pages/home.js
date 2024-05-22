@@ -7,23 +7,23 @@ import Container from "@mui/material/Container";
 //  Typography, Header
 import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 // Style
-import "./style.css";
+import "../style.css";
 
 //Imagens Card
 const CardAzul =
-  require("../../assets/images/cards-home/Card-Home-Azul.svg").ReactComponent;
+  require("../assets/images/cards-home/Card-Home-Azul.svg").ReactComponent;
 const CardLaranja =
-  require("../../assets/images/cards-home/Card-Home-Laranja.svg").ReactComponent;
+  require("../assets/images/cards-home/Card-Home-Laranja.svg").ReactComponent;
 const CardRosa =
-  require("../../assets/images/cards-home/Card-Home-Rosa.svg").ReactComponent;
+  require("../assets/images/cards-home/Card-Home-Rosa.svg").ReactComponent;
 const CardRoxo =
-  require("../../assets/images/cards-home/Card-Home-Roxo.svg").ReactComponent;
+  require("../assets/images/cards-home/Card-Home-Roxo.svg").ReactComponent;
 const CardVerde =
-  require("../../assets/images/cards-home/Card-Home-Verde.svg").ReactComponent;
+  require("../assets/images/cards-home/Card-Home-Verde.svg").ReactComponent;
 const CardVermelho =
-  require("../../assets/images/cards-home/Card-Home-Vermelho.svg").ReactComponent;
+  require("../assets/images/cards-home/Card-Home-Vermelho.svg").ReactComponent;
 
-const Logo = require("../../logo.svg").ReactComponent;
+const Logo = require("../assets/images/logo.svg").ReactComponent;
 
 function Home() {
   return (

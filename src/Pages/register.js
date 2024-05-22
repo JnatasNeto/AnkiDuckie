@@ -15,7 +15,7 @@ import Button from "@mui/material/Button";
 import Alert from "@mui/material/Alert";
 import { alpha, styled } from "@mui/material/styles";
 // Images
-const Logo = require("../../logo.svg").ReactComponent;
+const Logo = require("../assets/images/logo.svg").ReactComponent;
 
 // TextField Personalizado
 const DuckieTextField = styled((props) => (
@@ -45,7 +45,7 @@ const DuckieTextField = styled((props) => (
 }));
 
 function Subscribe() {
-  const [name, setName] = useState("");
+  const [nome, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -64,7 +64,7 @@ function Subscribe() {
   }, [error, success]);
 
   const handleSubscribe = async () => {
-    if (!name || !email || !password || !confirmPassword) {
+    if (!nome || !email || !password || !confirmPassword) {
       setError("Todos os campos são obrigatórios");
       setSuccess(""); // Clear success message when there is an error
       return;
@@ -78,7 +78,7 @@ function Subscribe() {
 
     try {
       const response = await axios.post("http://localhost:8080/auth/register", {
-        name,
+        nome,
         email,
         password,
       });
@@ -213,10 +213,10 @@ function Subscribe() {
               sx={{ display: "flex", flexDirection: "column", gap: ".5rem" }}
             >
               <DuckieTextField
-                id="outlined-required-name"
+                id="outlined-required-nome"
                 label="Name"
                 variant="filled"
-                value={name}
+                value={nome}
                 onChange={(e) => setName(e.target.value)}
                 sx={{ width: "100%" }}
               />

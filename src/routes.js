@@ -1,11 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { AppBar, Toolbar, Button, Container } from "@mui/material";
 
-import Home from "./Pages/Home";
-import HomeUser from "./Pages/HomeUser";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
-import Forgot from "./Pages/ForgotPassword";
-import Profile from "./Pages/Profile";
+import Home from "./Pages/home";
+import HomeUser from "./Pages/homeUser";
+import Login from "./Pages/login";
+import Register from "./Pages/register";
+import Forgot from "./Pages/forgotPassword";
+import Profile from "./Pages/profile";
 import { Gemini } from "./Pages/Gemini";
 
 

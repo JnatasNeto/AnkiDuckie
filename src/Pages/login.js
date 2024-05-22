@@ -15,7 +15,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Alert from "@mui/material/Alert";
 import { alpha, styled } from "@mui/material/styles";
-const Logo = require("../../logo.svg").ReactComponent;
+const Logo = require("../assets/images/logo.svg").ReactComponent;
 
 // TextField Personalizado
 const DuckieTextField = styled((props) => (
