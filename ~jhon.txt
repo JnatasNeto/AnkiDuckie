@@ -1,0 +1,72 @@
+import React, { useState } from "react";
+import { Box, Container, AppBar, Toolbar, Typography, Button, Modal, CssBaseline, Stack } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+
+function Profile() {
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+
+  const [open, setOpen] = useState(false);
+  const [modalDescription, setModalDescription] = useState("Criar modelo de perfil"); // Estado para armazenar o texto do modal
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  // Função para atualizar o texto do modal
+  const handleModalDescriptionChange = (event) => {
+    setModalDescription(event.target.value); // Atualiza o estado com o novo texto
+  };
+
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="xl">
+        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }}>
+          <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+              <Toolbar>
+                <div>
+                  <Button onClick={handleOpen} sx={{backgroundColor:'white', '&:hover': {backgroundColor: '#8ecae6'}}}>Perfil</Button>
+                  <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                  >
+                    <Box sx={style}>
+                      <Typography id="modal-modal-title" variant="h6" component="h2">
+                        Perfil
+                      </Typography>
+                      {/* Campo de entrada de texto para atualizar o texto do modal */}
+                      <input 
+                        type="text"
+                        value={modalDescription}
+                        onChange={handleModalDescriptionChange}
+                        style={{ width: "100%", marginTop: "10px" }}
+                      />
+                      {/* Exibição do texto atualizado pelo usuário */}
+                      <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                        {modalDescription}
+                      </Typography>
+                    </Box>
+                  </Modal>
+                </div>
+              </Toolbar>
+            </AppBar>
+          </Box>
+        </Box>
+      </Container>
+    </React.Fragment>
+  );
+}
+
+export default Profile;
